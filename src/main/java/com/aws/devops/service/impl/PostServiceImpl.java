@@ -17,7 +17,7 @@ public class PostServiceImpl implements PostService {
         return postRepository.save(post);
     }
 
-    public Optional<Post> findAllById(Long id){
+    public Optional<Post> findById(Integer id){
         Optional<Post> post = postRepository.findById(id);
         return post;
     }
@@ -26,4 +26,5 @@ public class PostServiceImpl implements PostService {
         List<Post> p = postRepository.findAll();
         return p;
     }
+
 }
