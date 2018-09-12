@@ -1,5 +1,5 @@
 package com.aws.devops.bean;
-
+//https://www.callicoder.com/hibernate-spring-boot-jpa-one-to-many-mapping-example
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
