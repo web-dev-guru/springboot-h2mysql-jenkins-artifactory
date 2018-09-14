@@ -27,4 +27,9 @@ public class PostServiceImpl implements PostService {
         return p;
     }
 
+    @Override
+    public Boolean isPostExist(Integer id) {
+        return postRepository.existsById(id);
+    }
+
 }

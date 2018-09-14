@@ -10,4 +10,5 @@ public interface PostService {
     public Post save(Post post);
     public List<Post> findAll();
     public Optional<Post> findById(Integer id);
+    public Boolean isPostExist(Integer id);
 }
