@@ -34,7 +34,6 @@ public class Post {
 
     @OneToMany(mappedBy = "post",cascade = CascadeType.ALL, orphanRemoval = true)
     @OrderBy("commentId asc")
-
     @JsonProperty("comments")
     @JsonIgnore
     private List<Comment> comments;

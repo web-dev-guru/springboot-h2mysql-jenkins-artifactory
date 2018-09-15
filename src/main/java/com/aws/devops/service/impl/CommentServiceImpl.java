@@ -1,6 +1,7 @@
 package com.aws.devops.service.impl;
 
 import com.aws.devops.bean.Comment;
+import com.aws.devops.bean.Post;
 import com.aws.devops.repositories.CommentRepository;
 import com.aws.devops.repositories.PostRepository;
 import com.aws.devops.service.CommentService;
@@ -28,8 +29,12 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public Optional<Comment> findById(Integer id) {
-        return Optional.empty();
-    }
+        Optional<Comment> comment = commentRepository.findById(id);
+        return comment;
 
+    }
+    public void delete(Integer index){
+
+    }
 
 }

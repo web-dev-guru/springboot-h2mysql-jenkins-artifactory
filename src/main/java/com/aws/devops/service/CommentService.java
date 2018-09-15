@@ -10,5 +10,6 @@ public interface CommentService {
     public Comment save(Comment comment);
     public List<Comment> findAll();
     public Optional<Comment> findById(Integer id);
+    public void delete(Integer index);
 
 }

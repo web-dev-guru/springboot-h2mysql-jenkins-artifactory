@@ -2,6 +2,8 @@ package com.aws.devops.bean;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -25,7 +27,8 @@ public class Comment {
 
 
     @ManyToOne(cascade={CascadeType.MERGE,CascadeType.REFRESH},fetch = FetchType.LAZY,optional = false)
-    @JoinColumn(name = "post_comment_id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JoinColumn(name = "post_comment_id",nullable = false)
     private Post post;
 
     public Post getPost() {
